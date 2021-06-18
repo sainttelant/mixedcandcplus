@@ -12,7 +12,8 @@ extern "C" {
 
 	extern void* ParameterIFCreate( );
 	extern void  ParameterIFDestroy(void * p_ParameterIF);
-	extern _Param Update(void * p_ParameterIF,char* m_path);
+	extern bool GetXmlPath(void*p_ParameterIF, char* calibxml, char* vehiclexml, char* configxml);
+	extern _Param Update(void * p_ParameterIF);
 
 
 
