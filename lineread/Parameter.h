@@ -26,9 +26,9 @@ class Parameter
 	};
 
 	public:
-		static Parameter &Instance() {
+		static Parameter *Instance() {
 			static Parameter m_ucitparam;
-			return m_ucitparam;
+			return &m_ucitparam;
 		};
 
 		Parameter();

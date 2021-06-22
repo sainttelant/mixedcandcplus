@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include "Database.h"
 #include "ParameterIF.h"
+#include "test.h"
 
 
 
@@ -26,7 +27,6 @@ int main(int argc, char* argv[])
 	bool ret = GetXmlPath(Parameter,calx, vehx, config);
 	printf("end[%s,%s] \n", calx, vehx);
 	test = Update(Parameter);
-
 
 
 	if (calx!=NULL)

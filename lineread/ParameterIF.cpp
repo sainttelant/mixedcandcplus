@@ -7,13 +7,17 @@
 
 	extern void* ParameterIFCreate()
 	{
-		return new Parameter;
+		Parameter* p_Parameter = Parameter::Instance();
+		return p_Parameter;
 	}
 
 	extern void  ParameterIFDestroy(void* p_ParameterIF)
 	{
 		Parameter* temp = (Parameter*)p_ParameterIF;
-		delete temp;
+		
+		// 直接析构拉倒
+		temp->~Parameter();
+		
 	}
 
 	extern bool GetXmlPath(void* p_ParameterIF,char* calibxml, char* vehiclexml, char* configxml)
